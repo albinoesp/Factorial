@@ -1,8 +1,8 @@
 
 public class Factorialmain {
     public static void main(String[] args) {
-        int[] a ;
-        a = new int[args.length];
+        Integer[] a ;
+        a = new Integer[args.length];
 
         for(int i = 0; i < args.length; i++){
             a[i] = Integer.parseInt(args[i]);

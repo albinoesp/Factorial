@@ -1,8 +1,8 @@
 public class Factorial implements Runnable {
 
-    int[] list;
+    Integer[] list;
 
-    public Factorial(int[] a){
+    public Factorial(Integer[] a){
         this.list = a;
     }
     public void run(){
@@ -12,9 +12,9 @@ public class Factorial implements Runnable {
                 for (int j = 1; j < list[i]; j++) {
                     resultado = resultado * j;
                 }
-                System.out.println(Thread.currentThread().getName() + ". El resultado para este Thread con factor de " + i + " es: " + resultado);
+                System.out.println(Thread.currentThread().getName() + ". El resultado para este Thread con factor de " + list[i] + " es: " + resultado);
             } else if (list[i] == 0){
-                System.out.println(Thread.currentThread().getName() + ". El resultado para este Thread con factor de " + i + " es: " + 1);
+                System.out.println(Thread.currentThread().getName() + ". El resultado para este Thread con factor de " + list[i] + " es: " + 1);
             } else {
                 System.out.println("Para el Thread: " + Thread.currentThread().getName() + " no hay factorial");
             }
